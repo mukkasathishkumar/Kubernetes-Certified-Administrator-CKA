@@ -338,5 +338,5 @@ complete -F __start_kubectl k
    
  ### References
 - [ K8S Walid Shaari](https://github.com/aireddy73/Kubernetes-Certified-Administrator)
-- [ K8S Walid Shaari](https://github.com/aireddy73/Kubernetes)   
+- [ K8S aireddy73](https://github.com/aireddy73/Kubernetes)   
 - [CKA Zeal Vora](https://github.com/aireddy73/certified-kubernetes-administrator) 
