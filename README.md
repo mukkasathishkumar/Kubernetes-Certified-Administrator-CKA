@@ -1,5 +1,7 @@
 # Kubernetes Certified Administration
 
+CKA is not MCQ exam. CKA Mainly tests our ability to perform on a practical level than just asking a few MCQ questions that would test your knowledge. 
+
 Online resources that will help you prepare for taking the Kubernetes Certified Administrator Certification exam.
 
 **Disclaimer**: This is not likely a comprehensive list as the exam will be a moving target with the fast pace of k8s development.
@@ -58,6 +60,20 @@ These are the exam objectives you review and understand in order to pass the tes
 
 * [CNCF Exam Curriculum repository ](https://github.com/cncf/curriculum)
 
+
+## Exam Details:
+CKA is a 100% hands-on exam with 15-17 practical questions you need to solve from a command line. Each question has a different weightage. We need to achieve at least a 66% score to pass the exam.
+
+Duration of Exam: 2 hours
+Software Version: Kubernetes v1.20
+Number of Questions: 17 (All hands-on, each question with a different weightage)
+Passing score: 66%
+
+During Exam, we are allowed to access below pages but only one tab allowed to open at any time:
+1. https://kubernetes.io/docs
+2. https://github.com/kubernetes
+3. https://kubernetes.io/blog
+
 ### [ Cluster Architecture, Installation, and Configuration](https://youtu.be/vS-wXo2qbPs) 25%
 1. [Manage role based access control](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
    - [Practice: RBAC with Kubernetes in Minikube](https://medium.com/@HoussemDellai/rbac-with-kubernetes-in-minikube-4deed658ea7b)
@@ -68,47 +84,7 @@ These are the exam objectives you review and understand in order to pass the tes
 1. [Peform a version upgrade on Kubernetes cluster using kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-upgrade/)
 1. [implment etcd backup and restore](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#backing-up-an-etcd-cluster)
 
-[Kubecon Europe 2020: Kubeadm deep dive](https://youtu.be/DhsFfNSIrQ4)
-<details>
-<summary> sample commands used during backup/restore/update of nodes </summary>
-<p>
 
-```
-#etcd backup and restore brief
-export ETCDCTL_API=3  # needed to specify etcd api versions, not sure if it is needed anylonger with k8s 1.19+ 
-etcdctl snapshot save -h   #find save options
-etcdctl snapshot restore -h  #find restore options
-
-## possible example of save, options will change depending on cluster context, as TLS is used need to give ca,crt, and key paths
-etcdctl snapshot save /backup/snapshot.db  --cert=/etc/kubernetes/pki/etcd/server.crt  --key=/etc/kubernetes/pki/etcd/server.key --cacert=/etc/kubernetes/pki/etcd/ca.crt
-
-
-# evicting pods/nodes and bringing back node back to cluster
-kubectl drain  <node># to drain a node
-kubectl uncordon  <node> # to return a node after updates back to the cluster from unscheduled state to Ready
-kubectl cordon  <node>   # to not schedule new pods on a node
-
-#backup/restore the cluster (e.g. the state of the cluster in etcd)
-
-
-# upgrade kubernetes worker node
-kubectl drain <node>
-apt-get upgrade -y kubeadm=<k8s-version-to-upgrade>
-apt-get upgrade -y kubelet=<k8s-version-to-upgrade>
-kubeadm upgrade node config --kubelet-version <k8s-version-to-upgrade>
-systemctl restart kubelet
-kubectl uncordon <node>
-
-
-#kubeadm upgrade steps
-kubeadm upgrade plan
-kubeadm upgrade apply
-
-
-```
-
-</p>
-</details> 
 
 ### Workloads & Scheduling – 15%
 1. [Understand deployments and how to perform rolling update and rollbacks](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
@@ -230,8 +206,65 @@ spec:
 1. [Troubleshoot networking](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/)
    - [DNS troubleshooting](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/)
 
+<details>
+<summary> sample commands used during backup/restore/update of nodes </summary>
+<p>
+
+```
+#etcd backup and restore brief
+export ETCDCTL_API=3  # needed to specify etcd api versions, not sure if it is needed anylonger with k8s 1.19+ 
+etcdctl snapshot save -h   #find save options
+etcdctl snapshot restore -h  #find restore options
+
+## possible example of save, options will change depending on cluster context, as TLS is used need to give ca,crt, and key paths
+etcdctl snapshot save /backup/snapshot.db  --cert=/etc/kubernetes/pki/etcd/server.crt  --key=/etc/kubernetes/pki/etcd/server.key --cacert=/etc/kubernetes/pki/etcd/ca.crt
+
+
+# evicting pods/nodes and bringing back node back to cluster
+kubectl drain  <node># to drain a node
+kubectl uncordon  <node> # to return a node after updates back to the cluster from unscheduled state to Ready
+kubectl cordon  <node>   # to not schedule new pods on a node
+
+#backup/restore the cluster (e.g. the state of the cluster in etcd)
+
+
+# upgrade kubernetes worker node
+kubectl drain <node>
+apt-get upgrade -y kubeadm=<k8s-version-to-upgrade>
+apt-get upgrade -y kubelet=<k8s-version-to-upgrade>
+kubeadm upgrade node config --kubelet-version <k8s-version-to-upgrade>
+systemctl restart kubelet
+kubectl uncordon <node>
+
+
+#kubeadm upgrade steps
+kubeadm upgrade plan
+kubeadm upgrade apply
+
+
+```
+
+</p>
+</details> 
 
 ## Tips:
+- Practice until you get enough confidence.
+- Learn some Linux shortcuts, Prepare yourself to be fast enough to complete 17-20 different tasks in 2 hours. 
+- [Bookmark the URLs of all relative configurations from kubernetes.io/documents to a bookmark folder]().
+- Get used to the official kubectl Cheat Sheet page, you will find many references from there.
+- Practice everything mentioned in the curriculum (like the upgrade, backup & restore, creating/modifying/scaling up pods, deployments, services, ingress etc.)
+- Get familiar with static pods, scheduling, PV, PVC, Kubernetes Networking, CNI, Network Policies, RBAC, Service accounts, Secrets and ConfigMaps etc.
+- Don’t forget to practice troubleshooting exercises and JSONpath queries.   
+   
+## Avoid below Mistakes during Exam:
+- Don’t forget to use the right context. Remember each question will have a different context mentioned on the top question window. You just need to copy/paste before doing anything related to that question.
+- Don’t open any link given on kubernetes.io without knowing the destination URL. Remember, You are allowed to open only the below links:
+https://kubernetes.io/docs
+https://github.com/kubernetes
+https://kubernetes.io/blog
+- Don’t open any URL in a new tab, You are allowed to open only one tab other than the exam tab.
+- In the CKA Exam, there would be 6 clusters but one would be the primary. So make sure to log out of other nodes after troubleshooting and coming back to the primary one for the next question.
+
 
 **practice**                                           **practice**                                         **practice**
 
