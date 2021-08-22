@@ -256,7 +256,7 @@ complete -F __start_kubectl k
    
 ## Where to Practise:
    - [Katacoda](https://www.katacoda.com/) - Easy and readily available K8S cluster.
-   - [Set up your on own cluster on cloud] - () I set up my cluster on GCP
+   - [Set up your on own cluster on cloud (GCP) ](/clusterSetup/install-steps-gcp.md)
 
 ## Miscellaneous (resources not allowed during exam):
 
