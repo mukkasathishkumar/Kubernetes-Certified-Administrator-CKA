@@ -1,13 +1,8 @@
-[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
 # Kubernetes Certified Administration
 
 Online resources that will help you prepare for taking the Kubernetes Certified Administrator Certification exam.
 
-**Disclaimer**: This is not likely a comprehensive list as the exam will be a moving target with the fast pace of k8s development - please make a pull request if there something wrong, should be added, or updated.
-
-I tried to restrict the cross references of resources to [kubernetes.io](kubernetes.io). Youtube videos and other blog resources are optional; however, I still found them useful in my k8s learning journey.
+**Disclaimer**: This is not likely a comprehensive list as the exam will be a moving target with the fast pace of k8s development.
 
 Ensure you have the right version of Kubernetes documentation selected (e.g. v1.20 as of 25th Jan 2021 exam) especially for API objects and annotations.
 
