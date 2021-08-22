@@ -10,6 +10,30 @@ Ensure you have the right version of Kubernetes documentation selected (e.g. v1.
 - [Certified Kubernetes Security Specialist CKS](https://github.com/walidshaari/Certified-Kubernetes-Secuirty-Specialist)
 - [Certified Kubernetes Application Developer CKAD](https://github.com/dgkanatsios/CKAD-exercises)
 
+### Getting Started with Docker
+- [What is Docker?](https://dockerlabs.collabnix.com/beginners/docker/what-is-docker.html)
+- [Getting started with Docker](https://dockerlabs.collabnix.com/)
+- [Play with Docker](https://labs.play-with-docker.com/)
+- [Docker for Beginners](https://dockerlabs.collabnix.com/beginners/README.html)
+- [Docker for Intermediate](https://dockerlabs.collabnix.com/intermediate/README.html)
+- [Docker for Advanced](https://dockerlabs.collabnix.com/advanced/README.html)
+- [Docker Certificate Associate Exam Preparation](https://dockerlabs.collabnix.com/docker/dca.html)
+- [More than Certified in Docker](https://morethancertified.teachable.com/courses/enrolled/1356756)
+- [Docker Cheatsheet](https://dockerlabs.collabnix.com/docker/cheatsheet/)
+
+### Getting Started with Kubernetes
+- [What is Kubernetes?](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
+- [Kubernetes Concepts](https://kubernetes.io/docs/concepts/)
+- [Kubernetes Tasks](https://kubernetes.io/docs/tasks/)
+- [Getting Started with Kubernetes - Eric Shanks](https://theithollow.com/2019/01/26/getting-started-with-kubernetes/) 
+- [Kubernetes Certified Application Developer (CKAD) - Mumshad Mannambeth](https://www.udemy.com/course/certified-kubernetes-application-developer/)
+- [Certified Kubernetes Administrator (CKA) - Mumshad Mannambeth](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/) 
+- [ Certified Kubernetes Security Specialist (CKS) - Mumshad Mannambeth](https://kodekloud.com/courses/enrolled/1378608)
+- [Kubernetes Components](https://kubernetes.io/docs/concepts/overview/components/)
+- [A visual guide on troubleshooting Kubernetes deployments](https://learnk8s.io/troubleshooting-deployments)
+- [JSON Path for Beginners](https://medium.com/@sovmirich/jsonpath-for-beginners-part-1-3-b8c973edf79e)
+
+
 ## CKA 2020 Exam Objectives
 
 These are the exam objectives you review and understand in order to pass the test.
