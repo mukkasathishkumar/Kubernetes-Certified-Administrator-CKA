@@ -337,6 +337,5 @@ complete -F __start_kubectl k
 - [LinuxAcademy/ACloudGuru CKA course](https://acloud.guru/learn/7f5137aa-2d26-4b19-8d8c-025b22667e76)  # labs last checked were updated to 1.18
    
  ### References
-- [ K8S Walid Shaari](https://github.com/aireddy73/Kubernetes-Certified-Administrator)
-- [ K8S aireddy73](https://github.com/aireddy73/Kubernetes)   
+- [ K8S aireddy73 ](https://github.com/aireddy73/Kubernetes)   
 - [CKA Zeal Vora](https://github.com/aireddy73/certified-kubernetes-administrator) 
