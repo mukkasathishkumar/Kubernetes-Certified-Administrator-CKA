@@ -34,6 +34,24 @@ Ensure you have the right version of Kubernetes documentation selected (e.g. v1.
 - [JSON Path for Beginners](https://medium.com/@sovmirich/jsonpath-for-beginners-part-1-3-b8c973edf79e)
 
 
+### Where to Practice 
+
+- [Access the practice test environment on Katacoda:](https://www.katacoda.com/liptanbiswas/courses/ckad-practice-challenges)
+- [Learn Kubernetes](https://www.katacoda.com/courses/kubernetes)
+- [Play with Kubernetes](https://labs.play-with-k8s.com/)
+- [Instruct Getting started with Kubernetes](https://play.instruqt.com/public/topics/getting-started-with-kubernetes)
+- [Kubernetes by example](https://kubernetesbyexample.com/)
+- [Core Concepts - 13%](https://liptanbiswas.com/tuts/ckad-practice-challenges/core-concepts.html)
+- [Configuration - 18%](https://liptanbiswas.com/tuts/ckad-practice-challenges/configuration.html)
+- [Multi-Container Pods - 10%](https://liptanbiswas.com/tuts/ckad-practice-challenges/multi-container-pods.html)
+- [Observability - 18%](https://liptanbiswas.com/tuts/ckad-practice-challenges/observability.html)
+- [Pod Design - 20%](https://liptanbiswas.com/tuts/ckad-practice-challenges/pod-design.html)
+- [Services & Networking - 13%](https://liptanbiswas.com/tuts/ckad-practice-challenges/service-network.html)
+- [State Persistence - 8%](https://liptanbiswas.com/tuts/ckad-practice-challenges/state-persistence.html) 
+
+### Set Up Own Cluster
+- [Set up your on own cluster on cloud (GCP) ](/clusterSetup/install-steps-gcp.md)
+
 ## CKA 2020 Exam Objectives
 
 These are the exam objectives you review and understand in order to pass the test.
@@ -275,10 +293,6 @@ echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permane
 alias k=kubectl
 complete -F __start_kubectl k
 ```
-   
-## Where to Practise:
-   - [Katacoda](https://www.katacoda.com/) - Easy and readily available K8S cluster.
-   - [Set up your on own cluster on cloud (GCP) ](/clusterSetup/install-steps-gcp.md)
 
 ## Miscellaneous (resources not allowed during exam):
 
@@ -290,3 +304,8 @@ complete -F __start_kubectl k
 - [Mumshad CKA with practice tests and mock exams](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/) - Highly recommended
 - [Killer.sh CKA simulator](https://killer.sh/cka)         &#x27F9; use code **walidshaari** for **20%** discount  - they update frequently
 - [LinuxAcademy/ACloudGuru CKA course](https://acloud.guru/learn/7f5137aa-2d26-4b19-8d8c-025b22667e76)  # labs last checked were updated to 1.18
+   
+ ### References
+- [ K8S Walid Shaari](https://github.com/aireddy73/Kubernetes-Certified-Administrator)
+- [ K8S Walid Shaari](https://github.com/aireddy73/Kubernetes)   
+- [CKA Zeal Vora](https://github.com/aireddy73/certified-kubernetes-administrator) 
