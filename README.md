@@ -62,10 +62,10 @@ These are the exam objectives you review and understand in order to pass the tes
 ## Exam Details:
 CKA is a 100% hands-on exam with 15-17 practical questions you need to solve from a command line. Each question has a different weightage. We need to achieve at least a 66% score to pass the exam.
 
-Duration of Exam: 2 hours
-Software Version: Kubernetes v1.20
-Number of Questions: 17 (All hands-on, each question with a different weightage)
-Passing score: 66%
+- Duration of Exam: 2 hours
+- Software Version: Kubernetes v1.20
+- Number of Questions: 17 (All hands-on, each question with a different weightage)
+- Passing score: 66%
 
 During Exam, we are allowed to access below pages but only one tab allowed to open at any time:
 1. https://kubernetes.io/docs
