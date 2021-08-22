@@ -1,10 +1,8 @@
 # Kubernetes Certified Administration
 
-CKA is not MCQ exam. CKA Mainly tests our ability to perform on a practical level than just asking a few MCQ questions that would test your knowledge. 
-
-Online resources that will help you prepare for taking the Kubernetes Certified Administrator Certification exam.
-
 **Disclaimer**: This is not likely a comprehensive list as the exam will be a moving target with the fast pace of k8s development.
+
+CKA is not MCQ exam. CKA Mainly tests our ability to perform on a practical level than just asking a few MCQ questions that would test your knowledge. 
 
 Ensure you have the right version of Kubernetes documentation selected (e.g. v1.20 as of 25th Jan 2021 exam) especially for API objects and annotations.
 
