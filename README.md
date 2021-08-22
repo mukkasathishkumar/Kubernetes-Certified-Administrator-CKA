@@ -257,9 +257,9 @@ kubeadm upgrade apply
 ## Avoid below Mistakes during Exam:
 - Don’t forget to use the right context. Remember each question will have a different context mentioned on the top question window. You just need to copy/paste before doing anything related to that question.
 - Don’t open any link given on kubernetes.io without knowing the destination URL. Remember, You are allowed to open only the below links:
-https://kubernetes.io/docs
-https://github.com/kubernetes
-https://kubernetes.io/blog
+1. https://kubernetes.io/docs
+2. https://github.com/kubernetes
+3. https://kubernetes.io/blog
 - Don’t open any URL in a new tab, You are allowed to open only one tab other than the exam tab.
 - In the CKA Exam, there would be 6 clusters but one would be the primary. So make sure to log out of other nodes after troubleshooting and coming back to the primary one for the next question.
 
