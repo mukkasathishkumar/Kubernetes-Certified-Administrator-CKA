@@ -248,7 +248,7 @@ kubeadm upgrade apply
 ## Tips:
 - Practice until you get enough confidence.
 - Learn some Linux shortcuts, Prepare yourself to be fast enough to complete 17-20 different tasks in 2 hours. 
-- [Bookmark the URLs of all relative configurations from kubernetes.io/documents to a bookmark folder]().
+- [Bookmark the URLs of all relative configurations from kubernetes.io/documents to a bookmark folder](/bookmarks/bookmark.html).
 - Get used to the official kubectl Cheat Sheet page, you will find many references from there.
 - Practice everything mentioned in the curriculum (like the upgrade, backup & restore, creating/modifying/scaling up pods, deployments, services, ingress etc.)
 - Get familiar with static pods, scheduling, PV, PVC, Kubernetes Networking, CNI, Network Policies, RBAC, Service accounts, Secrets and ConfigMaps etc.
