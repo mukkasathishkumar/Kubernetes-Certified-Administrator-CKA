@@ -6,8 +6,6 @@ Online resources that will help you prepare for taking the Kubernetes Certified 
 
 Ensure you have the right version of Kubernetes documentation selected (e.g. v1.20 as of 25th Jan 2021 exam) especially for API objects and annotations.
 
-LDR:  **practice**       **practice**      **practice**
-
 ## Other CK exams:
 - [Certified Kubernetes Security Specialist CKS](https://github.com/walidshaari/Certified-Kubernetes-Secuirty-Specialist)
 - [Certified Kubernetes Application Developer CKAD](https://github.com/dgkanatsios/CKAD-exercises)
