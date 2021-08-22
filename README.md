@@ -1,501 +1,286 @@
-Kubernetes-Certified-Administrator-CKA
+[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-Curriculum
-Open Source Curriculum for CNCF Certification Courses
+# Kubernetes Certified Administration
 
-This is the the latest version of the curriculum for the following CNCF exams:
+Online resources that will help you prepare for taking the Kubernetes Certified Administrator Certification exam.
 
-Certified Kubernetes Administrator (CKA)
-Certified Kubernetes Application Developer (CKAD)
-Certified Kubernetes Security Specialist (CKS)
-CNCF Official CKAD Main
-CNCF Kubernetes Curriculum Repo
-Getting Started with Docker
-What is Docker?
-Getting started with Docker
-Play with Docker
-Docker for Beginners
-Docker for Intermediate
-Docker for Advanced
-Docker Certificate Associate Exam Preparation
-More than Certified in Docker
-Docker Cheatsheet
-Getting Started with Kubernetes
-What is Kubernetes?
-Kubernetes Concepts
-Kubernetes Tasks
-Getting Started with Kubernetes - Eric Shanks
-Kubernetes Certified Application Developer (CKAD) - Mumshad Mannambeth
-Certified Kubernetes Administrator (CKA) - Mumshad Mannambeth
-Certified Kubernetes Security Specialist (CKS) - Mumshad Mannambeth
-Kubernetes Components
-A visual guide on troubleshooting Kubernetes deployments
-JSON Path for Beginners
-CKAD Exercises
-A set of exercises that helped me prepare for the Certified Kubernetes Application Developer exam, offered by the Cloud Native Computing Foundation, organized by curriculum domain. They may as well serve as learning and practicing with Kubernetes.
+**Disclaimer**: This is not likely a comprehensive list as the exam will be a moving target with the fast pace of k8s development - please make a pull request if there something wrong, should be added, or updated.
 
-During the exam, you are allowed to keep only one other browser tab open to refer official documentation. Make a mental note of the breadcrumb at the start of the excercise section, to quickly locate the relevant document in kubernetes.io. It is recommended that you read official documents before attempting exercises below it.
+I tried to restrict the cross references of resources to [kubernetes.io](kubernetes.io). Youtube videos and other blog resources are optional; however, I still found them useful in my k8s learning journey.
 
-Contents
-Core Concepts - 13%
-Configuration - 18%
-Multi-container pods - 10%
-Observability - 18%
-Pod design - 20%
-Services and networking - 13%
-State persistence - 8%
-Bonus Exercises
-CKAD Study Guide
-Where to Practice
-Access the practice test environment on Katacoda:
-Learn Kubernetes
-Play with Kubernetes
-Instruct Getting started with Kubernetes
-Kubernetes by example
-Core Concepts - 13%
-Configuration - 18%
-Multi-Container Pods - 10%
-Observability - 18%
-Pod Design - 20%
-Services & Networking - 13%
-State Persistence - 8%
-Create 2 node Cluster on Linux Academy playgroud or you can spinup cluster in one of the cloud providers (AWS, Azure or GCP)
-creating 2 node cluster with Kubeadm
+Ensure you have the right version of Kubernetes documentation selected (e.g. v1.20 as of 25th Jan 2021 exam) especially for API objects and annotations.
 
-Tasks from Kubernetes Doc
-The following are primarily links to either the 'concepts' or 'tasks' section of the kubernetes.io documentation. The 'task' items are very useful to use as labs. I've tied them directly to the curriculum to ensure they are appropriate study material for the exam.
+LDR:  **practice**       **practice**      **practice**
 
-Core Concepts and Kubectl
-Tasks -> Accessing Multiple Clusters
-Tasks -> Accessing Cluster with API
-Tasks -> Port Forwarding
-Tasks -> Shell to Running Container (exec)
-Multi-Container Pods
-Tasks -> Init Containers
-Concepts -> Logging Architecture
-Pod Design
-Concepts -> Assign Pods to Nodes - Selectors
-Concepts -> Annotations
-Concepts -> Labels and Selectors
-Tasks -> ReplicaSet Rolling Updates
-Concepts -> Deployments, Rollouts, and Rollbacks
-Configuration
-Task -> Config Maps
-Task -> Security Contexts
-Tasks -> Assigning Memory Resources to Pods
-Tasks -> Assigning CPU Resources to Pods
-Tasks -> Pod QOS
-Tasks -> Credentials using Secrets
-Tasks -> Project Volume w/Secrets
-Tasks -> Setting Service Account
-Observability
-Tasks -> App Introspection and Debugging
-Tasks - Liveness and Readiness Probes
-Tasks -> Debugging Pods
-Tasks -> Troubleshooting Applications
-Tasks -> Debugging Services
-Tasks -> Debugging Services Locally
-Tasks -> Tools for Monitoring Resources
-Services and Networking
-Concepts -> Connecting Apps with Services
-Tasks -> Declare Network Policy
-State Persistence
-Concepts -> Persistent Volumes
-Tasks -> Configuring PVCs
-CRON
-Tasks -> Automated Tasks with Cron Jobs
-Tasks -> Parallel Jobs with Expansions
-Tasks -> Course Parallel Processing with a Work Queue
-Tasks -> Fine Parallel Processsing with a Work Queue
-CKAD Exam Preparation Notes
-List of resources and notes for passing the Certified Kubernetes Application Developer (CKAD) exam. Official links below.
+## Other CK exams:
+- [Certified Kubernetes Security Specialist CKS](https://github.com/walidshaari/Certified-Kubernetes-Secuirty-Specialist)
+- [Certified Kubernetes Application Developer CKAD](https://github.com/dgkanatsios/CKAD-exercises)
 
-CNCF Official CKAD Main
-CNCF Kubernetes Curriculum Repo
-CNCF Official CKAD Exam Tips
-CNCF Official CKAD Candidate Handbook
-VIM Cheatsheet - You should know VIM pretty well
-Excellent CKAD Exercises to complement this guide
-More CKAD Practice Questions
-TMUX Cheat Sheet - TMUX is useful, especially for CKA
-Current Kubernetes Version (EXAM)
-Version: 1.20
+## CKA 2020 Exam Objectives
 
-Important vi Tips
-The moment you get into your exam terminal the first thing is you need to is below
+These are the exam objectives you review and understand in order to pass the test.
 
-$ vim ~/.vimrc
-set nu
-set ic
-set expandtab
-set shiftwidth=2
-set tabstop=2
-set list  ( This is very helpfull to see hidden charecters)
+* [CNCF Exam Curriculum repository ](https://github.com/cncf/curriculum)
 
-To Shift+v is used for visual mode .. Once you are visual mode you can select number of rows using up/down arrow keys
-once desired number of rows selected you can use shift + , or shift + . to move the indentation as needed.
-save this and you are good to write the exam and not to worry about the YAML indention issues
+### [ Cluster Architecture, Installation, and Configuration](https://youtu.be/vS-wXo2qbPs) 25%
+1. [Manage role based access control](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+   - [Practice: RBAC with Kubernetes in Minikube](https://medium.com/@HoussemDellai/rbac-with-kubernetes-in-minikube-4deed658ea7b)
+1. [Use kubeadm to install a basic cluster](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
+1. [Manage a highly available Kubernetes cluster](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/)
+   [Weaveworks Kubeadm HA cluster](https://www.weave.works/blog/running-highly-available-clusters-with-kubeadm)
+1. [Provision underlying infrastructure to deploy Kubernetes cluster](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
+1. [Peform a version upgrade on Kubernetes cluster using kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-upgrade/)
+1. [implment etcd backup and restore](https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#backing-up-an-etcd-cluster)
 
-Cloud Server Hostname mapping   
-172.31.38.***   xhyrgkf8ada5c.myserver.com
-172.31.38.***   ControlPlane
-172.31.36.***   WorkerNode1
-172.31.41.***   WorkerNode2
+[Kubecon Europe 2020: Kubeadm deep dive](https://youtu.be/DhsFfNSIrQ4)
+<details>
+<summary> sample commands used during backup/restore/update of nodes </summary>
+<p>
 
-$ sudo hostnamectl set-hostname ControlPlane
-$ sudo hostnamectl set-hostname WorkerNode1
-$ sudo hostnamectl set-hostname WorkerNode2
+```
+#etcd backup and restore brief
+export ETCDCTL_API=3  # needed to specify etcd api versions, not sure if it is needed anylonger with k8s 1.19+ 
+etcdctl snapshot save -h   #find save options
+etcdctl snapshot restore -h  #find restore options
 
-'dG' - Deletes contents from cursor to end of file. This is very useful when editing YAML files.
-'ZZ' - Save and exit quickly. 
-Vim Commands
-vi editor in Linux tutorial
-RHCSA 8 Complete Course in Single Video | Linux Certification
-kubectl Tips
-To set nano as your editor for 'kubectl edit'
+## possible example of save, options will change depending on cluster context, as TLS is used need to give ca,crt, and key paths
+etcdctl snapshot save /backup/snapshot.db  --cert=/etc/kubernetes/pki/etcd/server.crt  --key=/etc/kubernetes/pki/etcd/server.key --cacert=/etc/kubernetes/pki/etcd/ca.crt
 
-export KUBE_EDITOR="nano"
-Outline
-Right now there are five primary sections to this document.
 
-General Exam Tips
-Overview
-A Checklist of Curriculum Progress
-Where to Practice?
-Detailed Review (with Tips) Ordered by Curriculum
-List of Resources Ordered by Curriculum (mostly K8s.io) for Study
-Tips
-Okay, this section is new and contains some general pointers to help pass the exam.
+# evicting pods/nodes and bringing back node back to cluster
+kubectl drain  <node># to drain a node
+kubectl uncordon  <node> # to return a node after updates back to the cluster from unscheduled state to Ready
+kubectl cordon  <node>   # to not schedule new pods on a node
 
-First, as discussed later, the exam is primarily about speed. With that in mind, the best way to approach the moderate to complex questions is to generate the initial YAML via the dry run flag. Then, edit the file with either vi or nano, and then create the required resource. The steps are outlined below.
+#backup/restore the cluster (e.g. the state of the cluster in etcd)
 
-$ kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml > mypod.yaml
-$ nano mypod.yaml
-$ kubectl create -f mypod.yaml
-pod "nginx" created
-There you go. If you're not satisfied with the results. Delete the resource, re-edit the declaritive yaml file, and redo.
 
-$ kubectl delete -f mypod.yaml
-pod "nginx" deleted
-$ nano mypod.yaml
-$ kubectl create -f mypod.yaml
-pod "nginx" created
-Overview
-The CKAD exam requires an excellent understanding of K8s along with how to efficiently use kubectl to accomplish various tasks on Kubernetes. I'm sure they use this exam approach as it pretty much precludes any form of cheating. You either know the material and can very quickly implement it or not.
+# upgrade kubernetes worker node
+kubectl drain <node>
+apt-get upgrade -y kubeadm=<k8s-version-to-upgrade>
+apt-get upgrade -y kubelet=<k8s-version-to-upgrade>
+kubeadm upgrade node config --kubelet-version <k8s-version-to-upgrade>
+systemctl restart kubelet
+kubectl uncordon <node>
 
-You will be given a list of 'tasks' to accomplish on one of four kubernetes clusters (these are described in the official exam tips above). The exam is 'open book' but only with the content available at kubernetes.io. You will have one tab for the exam content and one additional tab for kubernetes.io. However, don't expect that you can just research questions during the exam, as there will be very little time for 'learning' a specific k8s concept at exam time. It's there to help with YAML syntax detail only, IMO.
 
-The items in this particular repo / page describe and follow the official curriculum and point back to the various documents at Kubernetes.io. There is a lot of content on k8s and a lot of it does not pertain to the CKAD exam, so I've pulled out the sections that are pertinent based on the curriculum. There is a nice checklist below that you can update once you think you have mastered a particular topic.
+#kubeadm upgrade steps
+kubeadm upgrade plan
+kubeadm upgrade apply
 
-Create 2 Node Cluster on GKE
-This particular exam is difficult for me as I didn't have a k8s cluster to use at work. CKA exam prepation requires more cluster-level work, I tried different approaches for an inexpensive k8s environment. I setup my 2 node cluster in Linux Academy Playgroud as well as Docker-Desktop single node cluster on Windows Laptop. In my opinion, that is all it required to pass this exam. You can also setup a gcloud account, and use a two-node GKE cluster for studying. You can even use the very nice google cloud shell and not even leave your browser.
 
-gcloud command line (SDK) documentation
+```
 
-Here are commands used to create a two-node cluster for studying. I keep these here just so I can fire up and destroy a cluster for a few hours each day for study. Notice that you can tailor the cluster version to match the k8s version for the exam.
+</p>
+</details> 
 
-gcloud config set compute/zone us-central1-a
-gcloud config set compute/region us-central1
-gcloud container clusters create my-cluster --cluster-version=1.15.8-gke.2 --image-type=ubuntu --num-nodes=2
-The result:
+### Workloads & Scheduling – 15%
+1. [Understand deployments and how to perform rolling update and rollbacks](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+2. Use [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) and [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) to configure applications
+  - [configure a pod with a configmap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)
+  - [configure a pod with a secret](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/)
+3. Know how to [scale applications](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#scaling-a-deployment)
+  - [scaling a statefulset](https://kubernetes.io/docs/tasks/run-application/scale-stateful-set/)
+  - [scaling a replicaset](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#scaling-a-replicaset)
+4. Understand the primitives used to create robust, self-healing, application deployments
+ - [Replicaset](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
+ - [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+ - [Statefulsets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
+ - [Daemonset](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
+5. Understand [how resource limits can affect Pod scheduling](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#how-pods-with-resource-requests-are-scheduled)
+6. Awareness of manifest management and common templating tools
+  * [Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/)
+    - [Kustomize Blog](https://kubernetes.io/blog/2018/05/29/introducing-kustomize-template-free-configuration-customization-for-kubernetes/)
+  * [manage kubernetes objects](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/)
+  * [Install service catalog using helm](https://kubernetes.io/docs/tasks/service-catalog/install-service-catalog-using-helm/)
+    - Non-k8s.io resource: CNCF Kubecon video: [An introduction to Helm - Bridget Kromhout, Microsoft & Marc Khouzam, City of Montreal](https://youtu.be/x2w6T0sE50w?list=PLj6h78yzYM2O1wlsM-Ma-RYhfT5LKq0XC)
+   - Non-k8s.io resource: External resource: [templating-yaml-with-code](https://learnk8s.io/templating-yaml-with-code)
 
-NAME        LOCATION       MASTER_VERSION  MASTER_IP     MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-my-cluster  us-central1-a  v1.15.8-gke.2   35.232.253.6  n1-standard-1  v1.15.8-gke.2  2          RUNNING
+### Services & Networking – 20% 
 
-cloudshell:~$ kubectl get nodes
-NAME                                        STATUS    ROLES     AGE       VERSION
-gke-my-cluster-default-pool-5f731fab-9d6n   Ready     <none>    44s       v1.15.8-gke.2
-gke-my-cluster-default-pool-5f731fab-llrb   Ready     <none>    41s       v1.15.8-gke.2
-Setting kubectl Credentials
-If using the cloud shell, you'll sometimes need to authorize kubectl to connect to your cluster instance.
+1. Understand [host networking configuration on the cluster nodes](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
+2. Understand connectivity between Pods
+  - [The concept of Pods networking](https://kubernetes.io/docs/concepts/workloads/pods/#pod-networking)
+3. Understand ClusterIP, NodePort, LoadBalancer service types and endpoints
+   - [service](https://kubernetes.io/docs/concepts/services-networking/service/)
+4. Know how to use [Ingress controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) and [Ingress resources](https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource)
+  - [Ingress concepts]((https://kubernetes.io/docs/concepts/services-networking/ingress/))
+5. [Know how to configure and use CoreDNS](https://kubernetes.io/docs/tasks/administer-cluster/dns-custom-nameservers/)
+6. [Choose an appropriate container network interface plugin](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#pod-network)
 
-gcloud container clusters get-credentials my-cluster
-Deleting Your Cluster
-No need to keep the cluster around when not studying, so:
+- [Kubernetes Networking Intro and Deep-Dive - Bowei Du & Tim Hockin, Google](https://youtu.be/tq9ng_Nz9j8)
+- [Kubernetes and Networks: why is this so dang hard?](https://youtu.be/xB190-yyJnY?t=241)
+- [Kubecon Eu 2020 Tutorial: Communication Is Key - Understanding Kubernetes Networking - Jeff Poole, Vivint Smart Home](https://youtu.be/InZVNuKY5GY?list=PLj6h78yzYM2O1wlsM-Ma-RYhfT5LKq0XC)
 
-gcloud container clusters delete my-cluster
-To Get Current GKE Kubernetes Versions
-  gcloud container get-server-config
-Detailed Review
-The exam is about speed and efficiency. If you spend very much time looking at documentation, you will have zero chance of completing the many questions. With that said, the following will help with time management. I've aligned the tips to follow the curriculum. This section is best used to provide a quick overview of the curriculum along with the needed kubectl commands for a hands-on exam.
 
-CORE CONCEPTS
-The core concepts section covers the core K8s API and its primitives and resources. It also covers the important concept of a POD. This is the basic unit of deployment for app developers and so this 'POD' concept is important to understand as well as how they are managed with kubectl. To me, this is embodied in the kubectl RUN command.
+### Storage – 10%
 
-Using the RUN/CREATE command for Pods, Deployments, etc.
-The run command allows quick creation of the various high-level execution resources in k8s, and provides speed, which we need for the exam. (NOTE: The use of run to handle various resource creations was updated to instead use the create command as of 1.14)
+1. Understand [storage classes](https://kubernetes.io/docs/concepts/storage/storage-classes/), [persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
+1. Understand [volume mode](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#volume-mode), [access modes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes) and [reclaim policies](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaim-policy) for volumes
+1. Understand [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) primitive
+1. Know how to [configure applications with persistent storage](https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/)
 
-The specific, underlying resource created from a particular create/run command is based on its 'generator'.
+<details>
+<summary> StorageClass, PersistentVolume, and PersitentVolumeClaim examples </summary>
+<p>
 
-$ kubectl create deployment nginx --image=nginx  #deployment
-$ kubectl run nginx --image=nginx --restart=Never  #pod
-$ kubectl create job nginx --image=nginx  #job
-$ kubectl create cronjob nginx --image=nginx --schedule="* * * * *"  #cronJob
-The above is helpful in the exam as speed is important. If the question indicates to 'create a pod', use the quick syntax to get a pod going.
+```
+#### Storage Class example
+#
 
-CONFIGURATION
-Configuration covers how run-time 'config' data is provided to your applications running in k8s. This includes environment variables, config maps, secrets, etc. Other items that are pertinent to config are the service account and security contexts used to execute the containers. The below items are covered by this part of the curriculum.
-
-Config Maps / Environment Variables
-The exam is about application development and its support within Kubernetes. With that said, high on the list of objectives is setting up config options and secrets for your applications. To create the most basic config map with a key value pair, see below.
-
-$ kubectl create configmap app-config --from-literal=key123=value123
-configmap "app-config" created
-There are many ways to map config map items to environment variables within a container process. One quick, but tricky (syntax) option is shown below. This would be for a simple nginx container.
-
-spec:
-  containers:
-  - image: nginx
-    name: nginx
-    envFrom:
-    - configMapRef:
-        name: app-config
-Here is another way to map a specific value to a specific environment variable value.
-
-  containers:
-  - image: nginx
-    name: nginx
-    env:
-      - name: SPECIAL_APP_KEY
-        valueFrom:
-          configMapKeyRef:
-            name: app-config
-            key: key123
-Now to verify it worked.
-
-$ kubectl exec -it nginx /bin/bash
-root@nginx:/# env
-HOSTNAME=nginx
-SPECIAL_APP_KEY=value123
-KUBERNETES_PORT_443_TCP_PROTO=tcp
-...
-Security Contexts
-Security contexts can be applied at either the pod or container level. Of course pod-level contexts apply to all containers within that pod. There are several ways of defining privileges and access controls with these contexts.
-
-These concepts are covered well in the tasks section below, but here is a basic RunAs example from the doc that shows both pod and container contexts being used.
-
+#### Persistent Volume Claim example
+#
+kind: PersistentVolumeClaim
 apiVersion: v1
-kind: Pod
-spec:
-  securityContext:
-    runAsUser: 1000
-  containers:
-  - name: sec-ctx-demo
-    image: gcr.io/google-samples/node-hello:1.0
-    securityContext:
-      runAsUser: 2000
-      allowPrivilegeEscalation: false
-App Resource Requirements
-Defining the memory and cpu requirements for your containers is something that should always be done. It allows for more efficient scheduling and better overall hygiene for your application environment. Again, covered well in the tasks section below, but here is a brief snippet for the standard mem/cpu specification.
-
-apiVersion: v1
-kind: Pod
-spec:
-  containers:
-  - name: demo
-    image: polinux/stress
-    resources:
-      limits:
-        memory: 200Mi
-        cpu: 200m
-      requests:
-        memory: 100Mi
-        cpu: 100m
-Now to verify:
-
-$ kubectl describe po stress
-Name:         stress
-Namespace:    default
-Labels:       run=stress
-IP:           10.36.1.17
-Containers:
-  stress:
-  Image:          polinux/stress
-  Limits:
-      cpu:     200m
-      memory:  200Mi
-    Requests:
-      cpu:        100m
-      memory:     100Mi
-Secrets
-To quickly generate secrets, use the --from-literal flag like this:
-
-$ kubectl create secret generic my-secret --from-literal=foo=bar -o yaml --dry-run > my-secret.yaml
-This produces the following secret that can then be consumed by your containers. The value is encoded.
-
-apiVersion: v1
-data:
-  foo: YmFy
-kind: Secret
 metadata:
-  creationTimestamp: null
-  name: my-secret
-Now create the secret:
+  name: local-pvc
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: local-storage-sc
+  resources:
+    requests:
+      storage: 100Mi
 
-$ kubectl create -f my-secret.yaml
-secret "my-secret" created
-Now have a look at it:
-
- kubectl get secret my-secret -o yaml
+## Persistent Volume example
+#
 apiVersion: v1
-data:
-  foo: YmFy
-kind: Secret
+kind: PersistentVolume
 metadata:
-  name: my-secret
-  namespace: default
-  uid: bae5b8d8-d01a-11e8-8972-42010a800002
-type: Opaque
-Decode it:
-
-$ echo "YmFy" | base64 --decode
-bar
-Secrets can be mounted as data volumes or be exposed as environment variables to be used by a container in a pod. Here we'll mount our above secret as a volume.
-
+  name: local-pv
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 200Mi
+  local:
+    path: /data/pv/disk021
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-storage-sc
+  volumeMode: Filesystem
+  
+###  Pod using the pvc
+#
 apiVersion: v1
 kind: Pod
 metadata:
-  name: secrets-test-pod
-spec:
-  containers:
-  - image: nginx
-    name: test-container
-    volumeMounts:
-    - mountPath: /etc/secret/volume
-      name: secret-volume
-  volumes:
-  - name: secret-volume
-    secret:
-      secretName: my-secret
-Service Accounts
-When pods are created by K8s they are provided an identify via the service account. In most cases, pods use the default service account, but it can be specified directly.
-
-apiVersion: v1
-kind: Pod
-metadata:
-  name: my-pod
-spec:
-  serviceAccountName: build-robot
-  ...
-MULTI-CONTAINER PODS
-This particular section needs additional detail as these concepts are not covered that well via the tasks provided at kubernetes.io. Actually, the best coverage (for sidecars) is in the concepts section under logging architecture.
-
-One or more containers running within a pod for enhancing the main container functionality (logger container, git synchronizer container); These are sidecar container
-
-One or more containers running within a pod for accessing external applications/servers (Redis cluster, memcache cluster); These are called ambassador container
-
-One or more containers running within a pod to allow access to application running within the container (Monitoring container); These are called as adapter containers-
-
-Concepts -> Logging Architecture
-
-POD DESIGN
-The Pod design section mostly covers deployments, rolling updates, and rollbacks (and jobs). These are all covered well in the tasks section later in this document. The primary trick here is to really understand the basic commands for updating a deployment which causes a new replicaSet to be created for the rollout. Both replica sets exist as the rollout continues and completes.
-
-Deployment Updates
-Below is a quick example of creating a deployment and then updating its image. This will force a rolling deployment to start. You can then roll it back.
-
-$ kubectl run nginx --image=nginx  --replicas=3
-deployment.apps "nginx" created
-Okay, now force a rolling update by updating its image.
-
-$ kubectl set image deploy/nginx nginx=nginx:1.9.1
-deployment.apps "nginx" image updated
-Now you can check the status of the roll out.
-
-$ kubectl rollout status deploy/nginx
-Waiting for rollout to finish: 2 out of 3 new replicas have been updated...
-Waiting for rollout to finish: 1 old replicas are pending termination...
-Waiting for rollout to finish: 2 of 3 updated replicas are available...
-deployment "nginx" successfully rolled out
-Now, if you want to roll it back:
-
-$ kubectl rollout undo deploy/nginx
-$ kubectl rollout status deploy/nginx
-Waiting for rollout to finish: 1 old replicas are pending termination...
-Waiting for rollout to finish: 2 of 3 updated replicas are available...
-deployment "nginx" successfully rolled out
-This is all describe well on kubernetes.io by searching for 'deployment' and reading the overview there. Kubernetes Deployments
-
-Jobs and CronJobs
-Job vs CronJob -> A job runs a pod to a number of successful completions. Cron jobs manage jobs that run at specified intervals and/or repeatedly at a specific point in time, thus they have the 'schedule' aspect. The below demonstrates quickly creating a cronjob and then a quick edit to add a command, etc.
-
-$ kubectl run crontest  --image=busybox --schedule="*/1 * * * *" --restart=OnFailure --dry-run -o yaml
-apiVersion: batch/v1beta1
-kind: CronJob
-metadata:
+  name: nginx
   labels:
-    run: crontest
-  name: crontest
+    name: nginx
 spec:
-  schedule: '*/1 * * * *'
-  jobTemplate:
-    spec:
-      template:
-        spec:
-          containers:
-          - image: busybox
-            name: crontest
-            command: ["date; echo Hello"]
-          restartPolicy: OnFailure
-You can also redirect (> cron.yaml) the above to a file, edit it to add the container command, and then create the cronjob with the kubectl create:
-
-$ kubectl create -f cron.yaml
-STATE PERSISTENCE
-This is still one of my weaknesses and the whole PV creation is high dependent on the underlying cloud or file storage technique used. For now, the links provided later in the persistence tasks are best for studying this.
-
-OBSERVABILITY
-This part of the curriculum covers the logging, debugging, and metrics of your running applications.
-
-Container Metrics
-Container metrics require that heapster be running, and it is pretty standard on clusters now.
-
-$ kubectl top pod -n my-namespace
-$ kubectl top node -n my-namespace
-SERVICES and NETWORKING
-Services are pretty straight forward, but there are lots of networking details in a k8s cluster. The curriculum only mentions network policies so you should understand that particular aspect of networking in good detail.
-
-Services
-Services provide a persistent endpoint for a logical set of pods. This endpoint is typically used to expose a pods services externally. They are quite straight forward and quick to build and configure, so the concepts are more important than the 'speed' factor for the exam, IMO. There are several ways to expose a service as well as the underlying detail of using selectors to ultimately select the target pods of the service.
-
-'Exposing' Ports for PODS
-By default pods can all inter-communicate via their internal IP address and port. Services are needed to expose services OUTSIDE of the cluster. So, it's important to understand the basic container spec for specifying the port a container will use. The example below declares the port as well as an environment variable describing same.
-
-spec:
-    containers:
+  containers:
+  - name: nginx
     image: nginx
-    imagePullPolicy: Always
-    name: busybox
-    env:
-    - name: PORT
-        value: "80"
-    ports:
-    - containerPort: 80
-        protocol: TCP
-Network Policies
-Resources use labels to select pods and define rules which specify what traffic is allowed to the selected pods. So, the pods themselves require certain labels / selectors to enable network policies.
+    volumeMounts:
+      - name: local-persistent-storage
+        mountPath: /var/www/html
+  volumes:
+    - name: local-persistent-storage
+      persistentVolumeClaim:
+        claimName: local-pvc
+```
 
-By default, pods are non-isolated; they accept traffic from any source.
+</p>
+</details> 
 
-Pods become isolated by having a NetworkPolicy that selects them. Once there is any NetworkPolicy in a namespace selecting a particular pod, that pod will reject any connections that are not allowed by any NetworkPolicy. (Other pods in the namespace that are not selected by any NetworkPolicy will continue to accept all traffic.)
+### Troubleshooting – 30%
 
-MISCELANEOUS TIPS and TRICKS
-Extracting yaml from running resource
-Use the --export and -o yaml flags to export the basic yaml from an existing resource:
+1. [Evaluate cluster and node logging](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
+1. [Understand how to monitor applications](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-usage-monitoring/)
+1. [Manage container stdout & stderr logs](https://kubernetes.io/docs/concepts/cluster-administration/logging/#logging-at-the-node-level)
+1. [Troubleshoot application failure](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/)
+   - [Pending or termintated pods](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#troubleshooting)
+1. [Troubleshoot cluster component failure](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/)
+1. [Troubleshoot networking](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/)
+   - [DNS troubleshooting](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/)
 
-kubectl get deploy busybox --export -o yaml > exported.yaml
-The --dry-run flag
-The --dry-run flag can be used with the kubectl run and create commands. It provides a nice template to start your declarative yaml config files. Below is an example for creating a basic secret yaml.
 
-kubectl create secret generic my-secret --from-literal=foo=bar -o yaml --dry-run > my-secret.yaml
-The --from-literal flag
-As shown above, the --from-literal flag is useful for things like config maps and secrets for the basic cases.
+## Tips:
 
-apiVersion: v1
-data:
-  foo: YmFy
-kind: Secret
-metadata:
-  creationTimestamp: null
-  name: my-secret
-Can I PR? There is an error/an alternative way/an extra question/solution I can offer
-Absolutely! Feel free to PR and edit/add questions and solutions, but please stick to the existing format.
+**practice**                                           **practice**                                         **practice**
+
+Get familiar with:
+* Familiarize yourself with the documentation, initially [concepts](https://kubernetes.io/docs/concepts/)  and mostly [tasks](https://kubernetes.io/docs/tasks/), **kubectl explain** command, [kubectl cheatsheet](https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/), and [kubectl commands reference](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
+  - https://kubernetes.io/docs/concepts/ 
+  - https://kubernetes.io/docs/tasks/ 
+  - https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/
+  - https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
+*  `kubectl api-versions` and `kubectl  api-resources` wih `grep` for a specific resoruce e.g. pv, pvc, deployment, storageclass, ..etc can help figure out the **apiVersion**, and **kind** combined with explain below will help in constructing the yaml manifest
+* [kubectl explain --recurisve](https://blog.heptio.com/kubectl-explain-heptioprotip-ee883992a243) to construct out any yaml manifest you need and find its specd and details
+
+* When using kubectl for investigations and troubleshooting utilize the wide output it gives your more details
+```
+     $kubectl get pods -o wide  --show-labels  --all-namespaces
+     or
+     $kubectl get pods -o wide  --show-labels  -A     # -A is quicker than --all-namespaces
+```
+* In `kubectl` utilizie `--all-namespaces or better -A` to ensure deployments, pods, objects are on the right name space, and right desired state
+
+* for events and troubleshooting utilize kubectl describe if its pod/resource related and logs if it is application issue related
+```
+     $kubectl describe pods <PODID>   # for pod, deployment, other k8s resource issues/events
+     $kubectl logs <PODID>            # for container/application issues like crash loops
+     
+```
+
+* [fast with kubectl](https://medium.com/faun/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443)  e.g. the '-o yaml' in conjuction with `--dry-run=client` allows you to create a manifest template from an imperative spec, combined with `--edit` it allows you to modify the object before creation
+```
+kubectl create service clusterip my-svc -o yaml --dry-run=client > /tmp/srv.yaml
+kubectl create --edit -f /tmp/srv.yaml
+```
+* use kubectl [aliases](https://github.com/ahmetb/kubectl-aliases) to speed up and reduce typo errors, practice these alaises early at your work and study for the exam. some example aliases:
+
+```
+alias k='kubectl'
+alias kg='kubectl get'
+alias kgpo='kubectl get pod'
+alias kcpyd='kubectl create pod -o yaml --dry-run=client'
+alias ksysgpo='kubectl --namespace=kube-system get pod'
+
+alias kd='kubectl delete'
+alias kdf='kubectl delete -f'
+## for quick deletes you can add --force --grace-period=0  **Not sure if it is a good idea if you are in a production cluster**
+alias krmgf='kubectl delete --grace-period 0 --force'
+alias kgsvcoyaml='kubectl get service -o=yaml'
+alias kgsvcwn='watch kubectl get service --namespace'
+alias kgsvcslwn='watch kubectl get service --show-labels --namespace'
+
+#example usage of aliases
+krmgf nginx-8jk71    # kill pod nginx-8jk71 using grace period 0 and force
+
+```
+* Enable [kubectl autocomplete](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#bash). Autocomplete is the life saviour in any timebound exam as well as our day to day work (e.g. If autocomplete enabled `k -n [Press Tab]` will suggest available namespaces). Example command to enable autocomplete is available at official [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#bash) page, you don't have to remember anything. 
+```
+source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
+echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permanently to your bash shell.
+
+alias k=kubectl
+complete -F __start_kubectl k
+```
+
+## Miscellaneous (resources not allowed during exam):
+
+1. [Troubleshooting use cases by Ian/Container solutions](https://github.com/ContainerSolutions/kubernetes-examples)
+
+## Popular training and practice sites:
+*Double check if the course is uptodate with the latest exam information (e.g. api, or curicuilim)*
+
+- [Mumshad CKA with practice tests and mock exams](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/) - Highly recommended
+- [Killer.sh CKA simulator](https://killer.sh/cka)         &#x27F9; use code **walidshaari** for **20%** discount  - they update frequently
+- [A Cloud Guru - Certified Kubernetes Administrator (CKA)](https://acloud.guru/overview/certified-kubernetes-administrator)  # k8s version 1.20 - last checked March 2021
+- [LinuxAcademy/ACloudGuru CKA course](https://acloud.guru/learn/7f5137aa-2d26-4b19-8d8c-025b22667e76)  # labs last checked were updated to 1.18
+- [rx-m online CKA course](https://rx-m.com/cka-online-training/)
+- [Pluralsight CKA course](https://www.pluralsight.com/paths/certified-kubernetes-administrator)
+- Duffie Cooly [hands-on CKA video](https://k8s.work/cka-lab.mp4) using KinD and accompanying [notes](https://hackmd.io/@mauilion/cka-lab)
+- [Stilian Stoilov](https://www.linkedin.com/in/stilian-stoilov-379972a9/) [practice questions](https://github.com/StenlyTU/K8s-training-official) - 40+ tasks with increasing difficulty.
+
+# What's Next:
+- Learn more about Kubernetes core components from [Duffie Cooly](https://twitter.com/mauilion) [TGIK Grokking playlist](https://www.youtube.com/playlist?list=PL7bmigfV0EqS6WxgWlH-p4dhkfuwcZ6-E)
+- [CKAD Certified Kubernetes Application Developer](https://www.cncf.io/certification/ckad/)
+- [CKS Certified Kubernetes Security Specialist](https://github.com/walidshaari/Certified-Kubernetes-Secuirty-Specialist)
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/walidshaari/Kubernetes-Certified-Administrator.svg)](https://starchart.cc/walidshaari/Kubernetes-Certified-Administrator)
+
