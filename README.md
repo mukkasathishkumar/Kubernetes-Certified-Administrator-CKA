@@ -255,8 +255,9 @@ complete -F __start_kubectl k
 ```
    
 ## Where to Practise:
-- [Katacoda] (https://www.katacoda.com) - Easy and readily available K8S cluster.
-- [Set up your on own cluster on cloud] - () I set up my cluster on GCP
+   - [Katacoda] (https://www.katacoda.com) - Easy and readily available K8S cluster.
+   - [Mumshad CKA with practice tests and mock exams](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/) - Highly recommended
+   - [Set up your on own cluster on cloud] - () I set up my cluster on GCP
 
 ## Miscellaneous (resources not allowed during exam):
 
