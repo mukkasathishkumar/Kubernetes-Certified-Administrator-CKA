@@ -1,6 +1,6 @@
 # Kubernetes Certified Administration
 
-**Disclaimer**: This is not likely a comprehensive list as the exam will be a moving target with the fast pace of k8s development.
+**Disclaimer**: This is not likely a comprehensive list as the exam will be a moving target with the fast pace of k8s.
 
 CKA is not MCQ exam. CKA Mainly tests our ability to perform on a practical level than just asking a few MCQ questions that would test your knowledge. 
 
